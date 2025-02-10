@@ -1,0 +1,136 @@
+/* Define color variables using the 70-20-10 split */
+:root {
+  --primary: #ffffff;   /* 70% (Lumen) */
+  --secondary: #5200FF;  /* 20% (Imperium) */
+  --tertiary: #3dffd0;   /* 10% (Aureum) */
+}
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Cinzel', serif;
+  background-color: var(--primary);
+  color: var(--secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  background-color: var(--secondary);
+  color: var(--primary);
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 3px double var(--tertiary);
+}
+
+header p {
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.controls {
+  margin: 20px;
+  text-align: center;
+}
+
+textarea#namesInput {
+  width: 300px;
+  height: 100px;
+  padding: 10px;
+  border: 2px solid var(--secondary);
+  border-radius: 5px;
+  font-size: 16px;
+  resize: vertical;
+}
+
+select#layoutSelect {
+  padding: 5px;
+  font-size: 16px;
+  border: 2px solid var(--secondary);
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.custom-options {
+  margin: 10px;
+}
+
+.custom-options input {
+  width: 60px;
+  padding: 5px;
+  margin: 0 5px;
+  font-size: 16px;
+  border: 2px solid var(--secondary);
+  border-radius: 5px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: var(--secondary);
+  color: var(--primary);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--tertiary);
+  color: var(--secondary);
+}
+
+/* Warning message styling */
+.warning-message {
+  color: red;
+  font-weight: bold;
+  margin: 10px;
+}
+
+/* Seating container styles with a classical Greek-inspired border */
+.seating-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+  padding: 20px;
+  border: 3px solid var(--secondary);
+  border-radius: 10px;
+  background-image: repeating-linear-gradient(45deg, var(--tertiary), var(--tertiary) 5px, var(--primary) 5px, var(--primary) 10px);
+}
+
+/* For block layouts (used in layout1, layout2, layout3) */
+.seating-block {
+  margin: 10px;
+  display: grid;
+  gap: 10px;
+}
+
+/* Individual seat styling */
+.seat {
+  width: 100px;
+  height: 100px;
+  background-color: var(--tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--secondary);
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: grab;
+  user-select: none;
+  transition: transform 0.2s ease;
+  /* Ensure long names break into multiple lines */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: normal;
+  text-align: center;
+}
+
+.seat:active {
+  cursor: grabbing;
+  transform: scale(1.05);
+}

@@ -12,27 +12,27 @@
 <body>
   <header>
     <h1>SLC Misce</h1>
-    <p>"Novos locos, novos amicos"</p>
+    <p>"Novi loci, novi amici"</p>
   </header>
   
   <div class="controls">
     <textarea id="namesInput" placeholder="Scribe nomina, separata per virgulas aut lineas"></textarea>
     
     <div class="arrangement">
-        <label for="layoutSelect"><b>Elige ordinationem sedendi:</b></label>
+        <label for="layoutSelect"><b>Elige ordinem sedendi:</b></label>
       <select id="layoutSelect">
-        <option value="layout1">Dextrum et Sinistrum: 2 x 6 (24 sedes)</option>
-        <option value="layout2">Tres partes: Sinistrum (2x3), Medium (3x4), Dextrum (2x3) (24 sedes)</option>
+        <option value="layout1">Dexter et sinister: 2 x 6 (24 sedes)</option>
+        <option value="layout2">Tres partes: sinister (2x3), medius (3x4), dexter (2x3) (24 sedes)</option>
         <option value="layout3">Tres columnas: 8 + 8 + 8 (24 sedes)</option>
         <option value="custom">Aliam ordinationem</option>
       </select>
     </div>
     
-    <!-- Custom layout options; visible only if "custom" is selected -->
+    <!-- Custom layout options; enkel zichtbaar als custom is geselecteerd -->
     <div id="customOptions" class="custom-options" style="display:none;">
       <label for="customRows">Ordines (Rijen):</label>
       <input type="number" id="customRows" min="1" value="4">
-      <label for="customCols">Columnas (Kolommen):</label>
+      <label for="customCols">Columnae (Kolommen):</label>
       <input type="number" id="customCols" min="1" value="6">
     </div>
     
@@ -40,7 +40,7 @@
     <button id="screenshotBtn">Depone PNG</button>
   </div>
   
-  <!-- Warning message if more names than seats -->
+  <!-- Waarschuwing als er meer namen zijn dan plaatsen -->
   <div id="warningMessage" class="warning-message"></div>
   
   <div id="seatingContainer" class="seating-container">
